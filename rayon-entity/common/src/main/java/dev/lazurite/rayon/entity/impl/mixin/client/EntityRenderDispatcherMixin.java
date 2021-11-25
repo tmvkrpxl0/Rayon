@@ -1,9 +1,9 @@
-package dev.lazurite.rayon.entity.common.impl.mixin.client;
+package dev.lazurite.rayon.entity.impl.mixin.client;
 
 import com.jme3.math.Vector3f;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import dev.lazurite.rayon.entity.common.api.EntityPhysicsElement;
+import dev.lazurite.rayon.entity.api.EntityPhysicsElement;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.world.entity.Entity;

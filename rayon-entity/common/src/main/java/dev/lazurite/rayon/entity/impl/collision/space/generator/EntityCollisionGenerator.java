@@ -1,11 +1,11 @@
-package dev.lazurite.rayon.entity.common.impl.collision.space.generator;
+package dev.lazurite.rayon.entity.impl.collision.space.generator;
 
 import com.jme3.bounding.BoundingBox;
 import com.jme3.math.Vector3f;
 import dev.lazurite.rayon.core.impl.bullet.collision.space.MinecraftSpace;
 import dev.lazurite.rayon.core.impl.bullet.collision.space.supplier.entity.EntitySupplier;
 import dev.lazurite.rayon.core.impl.bullet.math.Convert;
-import dev.lazurite.rayon.entity.common.impl.collision.body.EntityRigidBody;
+import dev.lazurite.rayon.entity.impl.collision.body.EntityRigidBody;
 
 public class EntityCollisionGenerator {
     public static void applyEntityCollisions(MinecraftSpace space) {

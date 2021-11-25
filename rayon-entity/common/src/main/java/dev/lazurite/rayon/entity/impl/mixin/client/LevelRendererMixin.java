@@ -1,7 +1,7 @@
-package dev.lazurite.rayon.entity.common.impl.mixin.client;
+package dev.lazurite.rayon.entity.impl.mixin.client;
 
 import com.jme3.math.Vector3f;
-import dev.lazurite.rayon.entity.common.api.EntityPhysicsElement;
+import dev.lazurite.rayon.entity.api.EntityPhysicsElement;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.Minecraft;

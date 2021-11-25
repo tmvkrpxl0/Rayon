@@ -1,6 +1,6 @@
-package dev.lazurite.rayon.entity.common.impl.mixin.common;
+package dev.lazurite.rayon.entity.impl.mixin.common;
 
-import dev.lazurite.rayon.entity.common.api.EntityPhysicsElement;
+import dev.lazurite.rayon.entity.api.EntityPhysicsElement;
 import net.minecraft.server.level.ServerEntity;
 import net.minecraft.world.entity.Entity;
 import org.spongepowered.asm.mixin.Final;

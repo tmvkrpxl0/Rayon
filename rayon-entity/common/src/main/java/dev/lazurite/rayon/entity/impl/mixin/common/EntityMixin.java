@@ -1,10 +1,10 @@
-package dev.lazurite.rayon.entity.common.impl.mixin.common;
+package dev.lazurite.rayon.entity.impl.mixin.common;
 
 import com.jme3.math.Quaternion;
 import com.jme3.math.Vector3f;
-import dev.lazurite.rayon.core.impl.RayonCore;
 import dev.lazurite.rayon.core.impl.bullet.math.Convert;
-import dev.lazurite.rayon.entity.common.api.EntityPhysicsElement;
+import dev.lazurite.rayon.core.impl.util.compat.ImmersivePortalsUtil;
+import dev.lazurite.rayon.entity.api.EntityPhysicsElement;
 import dev.lazurite.toolbox.api.math.QuaternionHelper;
 import dev.lazurite.toolbox.api.math.VectorHelper;
 import net.minecraft.nbt.CompoundTag;
@@ -24,7 +24,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class EntityMixin {
     @Inject(method = "getDeltaMovement", at = @At("HEAD"), cancellable = true)
     public void getVelocity(CallbackInfoReturnable<Vec3> info) {
-        if (this instanceof EntityPhysicsElement && RayonCore.isImmersivePortalsPresent()) {
+        if (this instanceof EntityPhysicsElement && ImmersivePortalsUtil.isImmersivePortalsPresent()) {
             info.setReturnValue(VectorHelper.toVec3(Convert.toMinecraft(
                 ((EntityPhysicsElement) this).getRigidBody().getLinearVelocity(new Vector3f()).multLocal(0.05f).multLocal(0.2f)
             )));
