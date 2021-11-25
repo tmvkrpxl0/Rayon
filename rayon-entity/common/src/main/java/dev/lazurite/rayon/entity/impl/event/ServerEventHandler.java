@@ -3,6 +3,7 @@ package dev.lazurite.rayon.entity.impl.event;
 import com.jme3.bounding.BoundingBox;
 import com.jme3.math.Vector3f;
 import dev.architectury.injectables.annotations.ExpectPlatform;
+import dev.lazurite.rayon.core.api.event.collision.PhysicsSpaceEvents;
 import dev.lazurite.rayon.core.impl.bullet.collision.body.ElementRigidBody;
 import dev.lazurite.rayon.core.impl.bullet.collision.space.MinecraftSpace;
 import dev.lazurite.rayon.core.impl.bullet.math.Convert;
@@ -15,16 +16,20 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 
 public class ServerEventHandler {
-    @ExpectPlatform
-    public static void register() {
-        throw new AssertionError();
-        /*
-        ServerPlayNetworking.registerGlobalReceiver(RayonEntity.MOVEMENT_PACKET, ServerEventHandler::onMovement);
+    public static void register(){
         PhysicsSpaceEvents.ELEMENT_ADDED.register(ServerEventHandler::onAddedToSpace);
+        registerSpecific();
+    }
+
+    @ExpectPlatform
+    @Deprecated
+    public static void registerSpecific() {
+        throw new AssertionError();
+        //ServerPlayNetworking.registerGlobalReceiver(RayonEntity.MOVEMENT_PACKET, ServerEventHandler::onMovement);
         ServerEntityEvents.ENTITY_LOAD.register(ServerEventHandler::onEntityLoad);
         EntityTrackingEvents.START_TRACKING.register(ServerEventHandler::onStartTracking);
         EntityTrackingEvents.STOP_TRACKING.register(ServerEventHandler::onStopTracking);
-        ServerTickEvents.START_WORLD_TICK.register(ServerEventHandler::onStartLevelTick);*/
+        ServerTickEvents.START_WORLD_TICK.register(ServerEventHandler::onStartLevelTick);
     }
 
     public static void onAddedToSpace(MinecraftSpace space, ElementRigidBody rigidBody) {

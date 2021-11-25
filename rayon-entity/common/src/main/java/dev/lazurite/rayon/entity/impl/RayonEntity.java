@@ -5,7 +5,6 @@ import dev.lazurite.rayon.core.impl.RayonCore;
 import dev.lazurite.rayon.entity.impl.event.ClientEventHandler;
 import dev.lazurite.rayon.entity.impl.event.ServerEventHandler;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
