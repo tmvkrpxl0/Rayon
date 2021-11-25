@@ -4,12 +4,12 @@
   "package": "dev.lazurite.rayon.entity.impl.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "dev.lazurite.rayon.entity.common.impl.mixin.common.EntityMixin",
-    "dev.lazurite.rayon.entity.common.impl.mixin.common.EntityTrackerEntryMixin"
+    "common.EntityMixin",
+    "common.EntityTrackerEntryMixin"
   ],
   "client": [
-    "dev.lazurite.rayon.entity.common.impl.mixin.client.EntityRenderDispatcherMixin",
-    "dev.lazurite.rayon.entity.common.impl.mixin.client.LevelRendererMixin"
+    "client.EntityRenderDispatcherMixin",
+    "client.LevelRendererMixin",
   ],
   "injectors": {
     "defaultRequire": 1
