@@ -3,5 +3,5 @@ apply from: '../../forge.gradle'
 dependencies {
     api project(path: ':rayon-core-forge', configuration: 'namedElements')
     common(project(path: ":rayon-entity-common", configuration: "namedElements")) { transitive false }
-    shadowCommon(project(path: ":rayon-entity-common", configuration: "transformProductionFabric")) { transitive false }
+    shadowCommon(project(path: ":rayon-entity-common", configuration: "transformProductionForge")) { transitive false }
 }
